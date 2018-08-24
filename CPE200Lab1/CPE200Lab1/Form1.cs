@@ -51,7 +51,7 @@ namespace CPE200Lab1
         private void btnPlus_Click(object sender, EventArgs e)
         {
 
-            number = float.Parse(lblDisplay.Text);
+            number = double.Parse(lblDisplay.Text);
             lblDisplay.Text = "0";
             symbol = "+";
 
@@ -61,27 +61,27 @@ namespace CPE200Lab1
         }
         private void btnMinus_Click(object sender, EventArgs e)
         {
-            number = float.Parse(lblDisplay.Text);
+            number = double.Parse(lblDisplay.Text);
             lblDisplay.Text = "0";
             symbol = "-";
         }
 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
-            number = float.Parse(lblDisplay.Text);
+            number = double.Parse(lblDisplay.Text);
             lblDisplay.Text = "0";
             symbol = "X";
         }
 
         private void btnDivide_Click(object sender, EventArgs e)
         {
-            number = float.Parse(lblDisplay.Text);
+            number = double.Parse(lblDisplay.Text);
             lblDisplay.Text = "0";
             symbol = "/";
         }
         private void btnPercent_Click(object sender, EventArgs e)
         {
-            number = float.Parse(lblDisplay.Text);
+            number = double.Parse(lblDisplay.Text);
             lblDisplay.Text = "0";
             symbol = "%";
         }
@@ -95,7 +95,7 @@ namespace CPE200Lab1
             {
                 if (lblDisplay.Text.Length < 8)
                 {
-                    result = (number + float.Parse(lblDisplay.Text));
+                    result = (number + double.Parse(lblDisplay.Text));
                     if (result >= 1e8)
                     {
                         lblDisplay.Text = "error";
@@ -113,7 +113,7 @@ namespace CPE200Lab1
             }
             if (symbol == "-")
             {
-                result = (number - float.Parse(lblDisplay.Text));
+                result = (number - double.Parse(lblDisplay.Text));
                 if (result < 0)
                 {
                     lblDisplay.Text = "error";
@@ -127,7 +127,7 @@ namespace CPE200Lab1
                 {
                     if (lblDisplay.Text.Length < 8)
                     {
-                        result = (number * float.Parse(lblDisplay.Text));
+                        result = (number * double.Parse(lblDisplay.Text));
                         if (result >= 1e8)
                         {
                             lblDisplay.Text = "error";
@@ -146,7 +146,7 @@ namespace CPE200Lab1
                         lblDisplay.Text = "error";
                          }
                     else {
-                        result = (number / float.Parse(lblDisplay.Text));
+                        result = (number / double.Parse(lblDisplay.Text));
                     }
                     lblDisplay.Text = Convert.ToString(result);
                     number = 0;
@@ -154,7 +154,7 @@ namespace CPE200Lab1
 
                 if (symbol == "%")
                 {
-                    result = ((number * float.Parse(lblDisplay.Text)) / 100);
+                    result = ((number * double.Parse(lblDisplay.Text)) / 100);
                     lblDisplay.Text = Convert.ToString(result);
                     number = 0;
                 }
