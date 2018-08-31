@@ -19,6 +19,7 @@ namespace CPE200Lab1
         double number;
         double result;
         string symbol;
+        private string order;
 
         private void btnX_Click(object sender, EventArgs e)
         {
